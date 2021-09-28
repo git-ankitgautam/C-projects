@@ -11,8 +11,44 @@
 */
 
 #include <stdio.h>
+int pattern(int row, int N, int *arr);
+int rev_pattern(int row, int N, int *rev_arr, int half);
 
-int *pattern(int row, int N, int *arr)
+int main()
+{
+    system("cls");
+    int N;
+
+    printf("Enter the value of N:- ");
+    scanf("%d",&N);
+    int *ptr, *rev_ptr;
+    int array[N], rev_array[N],half = (N/2)+1;
+
+    for(int i=1; i<=N;i++)
+    {
+        if(i <= half)
+        {
+            ptr = pattern(i, N, array);
+            for(int j=0;j<=N-1;j++)
+            {
+            
+                printf("%d ",ptr[j]);
+            }
+        }
+
+        else if(i > half)
+        {
+            rev_ptr = rev_pattern(i, N, rev_array, half);
+            for(int k=0;k<=N-1;k++)
+            {
+                printf("%d ",rev_ptr[k]);
+            }
+        }
+        printf("\n");
+    }
+}
+
+int pattern(int row, int N, int *arr)
 {
     int mid, len;
     if(row == 1)
@@ -43,7 +79,7 @@ int *pattern(int row, int N, int *arr)
     return arr;
 }
 
-int *rev_pattern(int row, int N, int *rev_arr, int half)
+int rev_pattern(int row, int N, int *rev_arr, int half)
 {
     int mid, len, diff;
     diff = row - half;
@@ -79,36 +115,3 @@ int *rev_pattern(int row, int N, int *rev_arr, int half)
     return rev_arr;
 }
 
-int main()
-{
-    system("cls");
-    int N;
-
-    printf("Enter the value of N:- ");
-    scanf("%d",&N);
-    int *ptr, *rev_ptr;
-    int array[N], rev_array[N],half = (N/2)+1;
-
-    for(int i=1; i<=N;i++)
-    {
-        if(i <= half)
-        {
-            ptr = pattern(i, N, array);
-            for(int j=0;j<=N-1;j++)
-            {
-            
-                printf("%d ",ptr[j]);
-            }
-        }
-
-        else if(i > half)
-        {
-            rev_ptr = rev_pattern(i, N, rev_array, half);
-            for(int k=0;k<=N-1;k++)
-            {
-                printf("%d ",rev_ptr[k]);
-            }
-        }
-        printf("\n");
-    }
-}
