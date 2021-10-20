@@ -20,6 +20,8 @@ int main()
 
     printf("Enter the index where you want to insert element = ");
     scanf("%d", &index);
+    
+    
     for(int i=9;i>=index;i--)
     {
         array[i+1] = array[i]; 

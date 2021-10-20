@@ -11,7 +11,7 @@ void printarray(int size, int *arr)
 
 int main()
 {
-    int size, index, temp=0,j;
+    int size, index, temp=0,j=0;
     printf("Enter the size of array =");
     scanf("%d", &size);
 
