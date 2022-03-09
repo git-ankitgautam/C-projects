@@ -5,10 +5,10 @@ int main()
 {
 	cout<<"Enter the number according to the operation you want to use\n";
 	cout<<"For Addition-1 \n    Subtraction-2 \n    Multiplication- 3 \n    Division-4\n";
-int x,c;
-float y,z,b,d;
-char a;
-cout<<"Your entry here-";
+	int x,c;
+	float y,z,b,d;
+	char a;
+	cout<<"Your entry here-";
 	cin>>x;
 	switch(x)
 	{
