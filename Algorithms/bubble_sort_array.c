@@ -4,7 +4,7 @@ void printarray(int size, int *arr)
 {
     for(int i=0; i<size;i++)
     {
-        printf("%d\n",arr[i]);
+        printf("%d ",arr[i]);
     }
 }
 
@@ -27,10 +27,10 @@ int main()
 
     //bubble sort
 
-    for(int i=0;i<size;i++)
+    for(int i=0;i<size-1;i++)
     {
         j = 0;
-        while(j <=size - i)
+        while(j <size - i -1)
         {
             if(array[j] > array[j+1])
             {
@@ -43,8 +43,7 @@ int main()
         
     }
 
-
-    printf("sorted array - ");
+    printf("\nsorted array - ");
     printarray(size, array);
     
     return 0;

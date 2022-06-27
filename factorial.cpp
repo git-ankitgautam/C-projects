@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 
 using namespace std;
 int main()
@@ -15,4 +15,22 @@ int main()
     cout<<""<<s;
     return 0;
 
+}
+*/
+// C++ program to find factorial of given number
+#include<iostream>
+
+inline double factorial(int n)
+{
+	// single line to find factorial
+	return (n==1 || n==0) ? 1: n * factorial(n - 1);
+}
+
+// Driver Code
+int main()
+{
+	int num;
+    std::cin>>num;
+	printf ("Factorial of %d is %d", num, factorial(num));
+	return 0;
 }

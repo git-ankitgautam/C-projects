@@ -4,7 +4,8 @@ CSE-1 (A1)
 #include <iostream>
 using namespace std;
 
-int division(int a, int b) {
+int division(int a, int b) 
+{
    if( b == 0 ) 
     {
         throw("cannot divide by zero"); //send the following string if this is encountered
@@ -12,7 +13,8 @@ int division(int a, int b) {
    return a/b;
 }
 
-int main () {
+int main () 
+{
    int x = 25;
    int y = 0;
    float z = 0;
